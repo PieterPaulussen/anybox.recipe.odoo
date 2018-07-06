@@ -163,4 +163,6 @@ def upgrade(upgrade_script, upgrade_callable, conf, buildout_dir):
         logger.error("Please check logs at %s" % log_path)
 
     log_file.close()
+    if statuscode is None:
+        statuscode = 0
     sys.exit(statuscode)
